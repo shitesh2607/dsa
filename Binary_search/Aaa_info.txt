@@ -1,0 +1,2 @@
+Identifcation == If given array or any things in sorted then think about Binary search first.
+complexity = O(logN)
