@@ -1,0 +1,7 @@
+Use of linked list
+1. stacks and queues
+2. Image galery
+3. Music player
+4. Browsers 
+5. Hashmap & hashset
+do watch this video to deep dive into it: https://www.youtube.com/watch?v=fxuVD1e66QA&list=PLKZaSt2df1gz775Mz-2gLpY9sld5wH8We&index=2
