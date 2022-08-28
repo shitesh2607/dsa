@@ -1,31 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-void smallest_element(vector<int>&nums, int k){
-    priority_queue<int, vector<int>, greater<int>> minheap;
-    int index = 0;
-    for(int i =0; i<nums.size();i++){
-        minheap.push(nums[i]);
-        if(minheap.size()>k){
-            nums[index] = minheap.top();
-            index++;
-            minheap.pop();
+class Solution {
+public:
+    void K_Closest_Numbers(vector<int>nums, int k, int x, vector<int>&ans){
+    priority_queue<pair<int, int>> maxHeap;
+    for(auto a:nums){
+        int diff = abs(a-x);
+        maxHeap.push({diff, a});
+        if(maxHeap.size()>k){
+            maxHeap.pop();
         }
     }
-    int n = minheap.size();
-    while(n--){
-        nums[index] = minheap.top();
-        index++;
-        minheap.pop();
+    int s = maxHeap.size();
+    while(s--){
+        ans.push_back(maxHeap.top().second);
+        // cout<<maxHeap.top().first<<" "<<maxHeap.top().second<<endl;
+        maxHeap.pop();
     }
+    sort(ans.begin(), ans.end());
     return;
 }
-int main(){
-    vector<int> nums = {6,5, 3, 2, 8, 10, 9};
-    int k =3;
-    smallest_element(nums, k);
-    for(auto a: nums){
-        cout<<a<<endl;
+    vector<int> findClosestElements(vector<int>& arr, int k, int x) {
+        vector<int>ans;
+        K_Closest_Numbers(arr, k, x, ans);
+        return ans;
     }
-    return 0;
-}
+};
