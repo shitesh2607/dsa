@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     vector<vector<int>>ans;
@@ -21,3 +24,17 @@ public:
         return ans;
     }
 };
+
+int main(){
+    vector<int>v = {2,3,6,7};
+    vector<vector<int>>ans;
+    Solution s;
+    ans = s.combinationSum(v, 7);
+    for(auto x: ans){
+        for(auto a:x){
+            cout<<a<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}

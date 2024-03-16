@@ -1,0 +1,1 @@
+SELECt extra as report_reason, COunt(DISTinct Post_id) as report_count FROM Action_table WHErE action_date = "2019-07-04" AnD action_take = "report" AND extra IS NOT NULL GROup BY extra

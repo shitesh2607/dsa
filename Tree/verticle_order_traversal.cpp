@@ -12,7 +12,7 @@ using namespace std;
  
 class Solution {
 public:
-    vector<vector<int>> verticalTraversalIn_levelOrer(TreeNode* root){
+    vector<vector<int>> vertical_Traversal_In_levelOrer(TreeNode* root){
     map<int, map<int, multiset<int>>> ans;
     queue<pair<TreeNode*, pair<int, int>>>q;
     q.push({root,{0,0}});

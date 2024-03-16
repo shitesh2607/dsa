@@ -1,17 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
-void factorial(int val){
+int printNum(int val){
     if(val==0){
-        return;
+        return 1;
     }
-    cout<<val<<endl;
-    factorial(val-1);
-    cout<<val<<endl;
+    return val*printNum(val-1);
 }
 
 int main()
 {
     // cout<<"Hello World";
-    factorial(5);
+    cout<<printNum(3);
+
     return 0;
 }

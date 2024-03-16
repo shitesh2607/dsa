@@ -10,14 +10,14 @@ public:
     ListNode* reverseList(ListNode* head)
     {
         if(head==NULL)return NULL;
-        ListNode *p=NULL, *c=head, *n=head->next;
-        while(c!=NULL){
-            c->next = p;
-            p = c;
-            c = n;
-            if(n!=NULL)
-                n = n->next;
+        ListNode *prev=NULL, *cur=head, *forwd=head->next;
+        while(cur!=NULL){
+            cur->next = prev;
+            prev = cur;
+            cur = forwd;
+            if(cur!=NULL)
+                forwd = forwd->next;
         }
-        return p;
+        return prev;
     }
 };

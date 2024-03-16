@@ -1,0 +1,1 @@
+SElECt actor_id, director_id FROM ActorDirector GROUP BY actor_id, director_id Having COUNT(timestamp) >= 3

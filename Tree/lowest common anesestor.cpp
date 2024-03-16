@@ -29,3 +29,5 @@ public:
         }
     }
 };
+//TC = o(N)
+// SC = o(N)

@@ -7,7 +7,6 @@ vector<int> All_Index(vector<int>arr, int target, int index, int found_so_far){
         return a;
     }
     
-    
     if(arr.at(index)==target){
         vector<int> temp_arr = All_Index(arr, target, index+1, found_so_far+1);
         temp_arr[found_so_far] = index;

@@ -24,6 +24,7 @@ class solution{
         }
         return temp;
     }
+    
     // optimiized solution 2
     ListNode* solution2(ListNode* head){
         ListNode *fast = head;

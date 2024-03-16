@@ -1,0 +1,1 @@
+// https://www.geeksforgeeks.org/minimum-time-to-burn-a-tree-starting-from-a-leaf-node/#:~:text=Given%20a%20binary%20tree%20and,get%20burned%20in%201%20second.
