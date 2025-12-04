@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class App {
+public class App {1
 
     private static final String url="jdbc:mysql://localhost:3306/jdbc_db";
     private static final String username="root";

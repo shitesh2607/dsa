@@ -1,0 +1,94 @@
+✅ 1. Declare + Initialize Later
+int[] arr;
+arr = new int[5];  // size = 5
+
+✅ 2. Declare and Initialize Together
+int[] arr = new int[5];
+
+✅ 3. Declare and Assign Values Directly
+int[] arr = {1, 2, 3, 4, 5};
+
+✅ 4. Using new with Values
+int[] arr = new int[]{10, 20, 30, 40};
+
+
+This is useful when returning arrays from methods.
+
+✅ 5. Multi-Dimensional Array
+int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+
+Or:
+
+int[][] matrix = new int[3][3];
+
+✅ 6. Array of Objects
+String[] names = new String[]{"Amit", "Hitesh", "Rohan"};
+
+
+
+______________Collection--------------
+
+
+✅ 1. Using ArrayList (Most Common Alternative to Array)
+
+Dynamic size → can grow or shrink.
+
+Declare
+List<Integer> list = new ArrayList<>();
+
+Add elements
+list.add(10);
+list.add(20);
+list.add(30);
+
+Get element
+int value = list.get(0);
+
+Size
+int size = list.size();
+
+✅ 2. Using LinkedList
+
+Better for frequent insertions/deletions.
+
+List<String> names = new LinkedList<>();
+names.add("Hitesh");
+names.add("Amit");
+
+✅ 3. Using Vector (Legacy, thread-safe)
+List<Integer> v = new Vector<>();
+v.add(1);
+v.add(2);
+
+✅ 4. Using Stack
+
+LIFO structure (extends Vector).
+
+Stack<String> stack = new Stack<>();
+stack.push("A");
+stack.push("B");
+
+✅ 5. Using Arrays.asList() → Convert to List
+List<Integer> list = Arrays.asList(1, 2, 3, 4);
+
+
+⚠️ This list is fixed-size, you cannot add/remove.
+
+✅ 6. Using List.of() (Immutable list)
+
+Java 9+
+
+List<String> list = List.of("A", "B", "C");
+
+
+Immutable → you cannot modify it.
+
+✅ When to use which?
+Use Case	Best Collection
+Dynamic, array-like	ArrayList
+Many insert/delete ops	LinkedList
+Thread-safe list	Vector / CopyOnWriteArrayList
+Immutable list	List.of()
