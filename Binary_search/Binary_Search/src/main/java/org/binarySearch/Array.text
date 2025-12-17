@@ -92,3 +92,27 @@ Dynamic, array-like	ArrayList
 Many insert/delete ops	LinkedList
 Thread-safe list	Vector / CopyOnWriteArrayList
 Immutable list	List.of()
+
+
+
+--------------------HashMap---------------;
+
+HashMap<Integer, Integer> map = new HashMap<>();
+HashMap<Character, Integer> freq = new HashMap<>();
+HashMap<String, Boolean> seen = new HashMap<>();
+
+
+1. Frequency Map
+for (int num : arr) {
+    map.put(num, map.getOrDefault(num, 0) + 1);
+}
+
+2. Check if element exists
+if (map.containsKey(target)) { ... }
+
+
+Iterate Map-----
+
+for (Map.Entry<Integer, Integer> e : map.entrySet()) {
+            System.out.println(e.getKey() + " = " + e.getValue());
+        }
