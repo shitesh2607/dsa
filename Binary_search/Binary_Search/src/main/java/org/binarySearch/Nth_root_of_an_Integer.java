@@ -39,7 +39,7 @@ public class Nth_root_of_an_Integer {
 
         while(low<=high){
             int mid=low + (high - low) / 2;
-            int ţempVar=calculateSum(piles,mid);
+            long ţempVar=calculateSum(piles,mid);
             if(ţempVar<=h){
                 ans =mid;
                 high=mid-1;
@@ -50,11 +50,10 @@ public class Nth_root_of_an_Integer {
         return ans;
     }
 
-    public int calculateSum(int[] piles, int k){
-        int total=0;
-        for(int i=0;i<piles.length;i++){
-            int t= (int) Math.ceil((double)piles[i]/k);
-            total+=t;
+    public long calculateSum(int[] piles, int k){
+        long total=0;
+        for (int p : piles) {
+            total += (p + k - 1L) / k;
         }
         return total;
     }
