@@ -1,6 +1,6 @@
 package org.binarySearch;
 
-public class Square_Root_of_NUmber {
+public class Square_Root_of_Number {
 
     public static void main(String[] args) {
 
